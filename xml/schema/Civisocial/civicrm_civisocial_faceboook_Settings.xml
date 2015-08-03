@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+    <base>CRM/Civisocial</base>
+    <class>CivisocialFacebooksettings</class>
+    <name>civisocial_facebook_settings</name>
+    <comment>Holds information about facebook settings</comment>
+    <add>4.6</add>
+
+
+
+
+
+
+
+
+
+
+</table>

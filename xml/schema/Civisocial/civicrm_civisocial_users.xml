@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+    <base>CRM/Civisocial</base>
+    <class>CivisocialUsers</class>
+    <name>civisocial_users</name>
+    <comment>Holds information about users</comment>
+    <add>4.6</add>
+
+
+
+
+
+    <field>
+        <name>user_id</name>
+        <type>bigint</type>
+        <title>Twitter user id</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter user id</comment>
+        <length>20</length>
+        <default>NULL</default>
+
+
+        <add>4.6</add>
+    </field>
+    <primaryKey>
+        <name>user_id</name>
+        <autoincrement>false</autoincrement>
+        <key>screen_name</key>
+        <key>followers_count</key>
+        <key>friends_count</key>
+        <key>last_tweet_date</key>
+        <key>last_updated</key>
+        <key>statuses_count</key>
+
+    </primaryKey>
+
+
+
+
+
+    <field>
+        <name>last_updated</name>
+        <type>timestamp</type>
+        <title>last updated </title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user last updated  time</comment>
+        <default>CURRENT_TIMESTAMP</default>
+        <onUpdate>CURRENT_TIMESTAMP</onUpdate>
+        <add>4.6</add>
+    </field>
+
+    <field>
+        <name>screen_name</name>
+        <type>varchar</type>
+        <title>screen name</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter user secreen name</comment>
+        <length>20</length>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>profile_image_url</name>
+        <type>varchar</type>
+        <title>profile image url</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>profile image url</comment>
+        <length>200</length>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>location</name>
+        <type>varchar</type>
+        <title>location</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user location</comment>
+        <length>100</length>
+        <default>NULL</default>
+
+    </field>
+
+
+    <field>
+        <name>url</name>
+        <type>varchar</type>
+        <title>url</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user url</comment>
+        <length>100</length>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>description</name>
+        <type>varchar</type>
+        <title>url</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user url</comment>
+        <length>160</length>
+        <default>NULL</default>
+
+    </field>
+
+
+    <field>
+        <name>created_at</name>
+        <type>datetime</type>
+        <title>user creation date</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user creation date</comment>
+
+
+    </field>
+
+
+    <field>
+        <name>followers_count</name>
+        <type>int</type>
+        <title>followers count</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user followers count</comment>
+        <length>10</length>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>friends_count</name>
+        <type>int</type>
+        <title>friends count</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user friends count</comment>
+        <length>10</length>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>statuses_count</name>
+        <type>int</type>
+        <title>friends count</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user friends count</comment>
+        <length>10</length>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>listed_count</name>
+        <type>int</type>
+        <title>listed count</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user listed count</comment>
+        <length>10</length>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>protected</name>
+        <type>tinyint</type>
+        <title>protected</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user protected status</comment>
+        <length>1</length>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>suspended</name>
+        <type>tinyint</type>
+        <title>suspended</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user suspended status</comment>
+        <length>1</length>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>lang</name>
+        <type>varchar</type>
+        <title>Language</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user Language</comment>
+        <length>1</length>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>last_tweet_date</name>
+        <type>datetime</type>
+        <title>Last tweet date</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>twitter user last tweet date</comment>
+        <length>1</length>
+        <default>NULL</default>
+
+    </field>
+
+
+
+
+
+
+
+</table>

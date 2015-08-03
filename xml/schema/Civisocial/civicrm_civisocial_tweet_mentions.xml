@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+    <base>CRM/Civisocial</base>
+    <class>CivisocialTweetmentions</class>
+    <name>civisocial_tweet_mentions</name>
+    <comment>Holds information about tweet mentions</comment>
+    <add>4.6</add>
+
+
+
+
+
+
+
+
+
+
+</table>

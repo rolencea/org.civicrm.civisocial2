@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+    <base>CRM/Civisocial</base>
+    <class>CivisocialAutodmlog</class>
+    <name>civisocial_autodmlog</name>
+    <comment>Holds information about automatic direct message log</comment>
+    <add>4.6</add>
+
+
+
+
+
+
+
+
+
+
+</table>
