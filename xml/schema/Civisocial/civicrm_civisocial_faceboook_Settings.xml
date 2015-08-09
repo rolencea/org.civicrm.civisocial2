@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+    <base>CRM/Civisocial</base>
+    <class>CivisocialFacebooksettings</class>
+    <name>civisocial_facebook_settings</name>
+    <comment>Holds information about facebook settings</comment>
+    <add>4.6</add>
+
+
+
+    <field>
+        <name>App_ID</name>
+        <type>varchar</type>
+        <title>Facebook app ID</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Unique App ID</comment>
+        <length>255</length>
+        <default>NULL</default>
+
+        <add>4.6</add>
+    </field>
+    <primaryKey>
+        <name>APP_ID</name>
+        <autoincrement>false</autoincrement>
+    </primaryKey>
+
+    <field>
+        <name>App_Name</name>
+        <type>varchar</type>
+        <title>Facebook app name</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Facebook Application</comment>
+        <length>255</length>
+        <default>NULL</default>
+        <add>4.6</add>
+    </field>
+
+
+    <field>
+        <name>App_secret</name>
+        <type>varchar</type>
+        <title>Facebook application secret</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Facebook Application</comment>
+        <length>255</length>
+        <default>NULL</default>
+        <add>4.6</add>
+
+    </field>
+
+
+
+
+</table>

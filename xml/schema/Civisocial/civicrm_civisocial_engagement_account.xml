@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+    <base>CRM/Civisocial</base>
+    <class>CivisocialEngagementaccount</class>
+    <name>civisocial_engagement_account</name>
+    <comment>Holds information about engagement account</comment>
+    <add>4.6</add>
+
+
+
+    <field>
+        <name>user_id</name>
+        <type>bigint</type>
+        <title>Twitter user id</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter user id</comment>
+        <length>20</length>
+        <default>NULL</default>
+
+
+        <add>4.6</add>
+    </field>
+    <primaryKey>
+        <name>user_id</name>
+        <autoincrement>false</autoincrement>
+
+        <key>screen_name</key>
+    </primaryKey>
+
+    <field>
+    <name>screen_name</name>
+    <type>varchar</type>
+    <title>screen name</title>
+    <import>true</import>
+    <required>true</required>
+    <comment>Twitter user secreen name</comment>
+    <length>20</length>
+    <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>screen_name</name>
+        <type>varchar</type>
+        <title>screen name</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter user secreen name</comment>
+        <length>20</length>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>old_timeline_collected</name>
+        <type>datetime</type>
+        <title>Old timeline</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter user old time line</comment>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>new_timeline_collected</name>
+        <type>datetime</type>
+        <title>New timeline</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter user New time line</comment>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>old_search_collected</name>
+        <type>datetime</type>
+        <title>Old search</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter user old search</comment>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>new_search_collected</name>
+        <type>datetime</type>
+        <title>New search</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter user New search</comment>
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>search_since_id</name>
+        <type>bigint</type>
+        <title>Search since</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter user search since </comment>
+        <length>20</length>
+        <default>NULL</default>
+
+    </field>
+
+
+    <field>
+        <name>old_dms_sent_collected</name>
+        <type>datetime</type>
+        <title>Old dms sent</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Old direct message sent collected </comment>
+
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>new_dms_sent_collected</name>
+        <type>datetime</type>
+        <title>New dms sent</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>direct direct message sent collected </comment>
+
+        <default>NULL</default>
+
+    </field>
+
+
+
+    <field>
+        <name>old_dms_received_collected</name>
+        <type>datetime</type>
+        <title>Old dms received</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Old direct message received collected </comment>
+
+        <default>NULL</default>
+
+    </field>
+
+    <field>
+        <name>new_dms_received_collected</name>
+        <type>datetime</type>
+        <title>New dms received</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>direct direct message received collected </comment>
+
+        <default>NULL</default>
+
+    </field>
+
+
+
+
+
+
+
+
+
+
+
+
+</table>

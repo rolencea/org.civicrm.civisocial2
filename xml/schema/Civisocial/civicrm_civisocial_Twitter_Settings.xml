@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+    <base>CRM/Civisocial</base>
+    <class>CivisocialTwittersettings</class>
+    <name>civisocial_twitter_settings</name>
+    <comment>Holds information about twitter settings</comment>
+    <add>4.6</add>
+
+    <field>
+        <name>App_ID</name>
+        <type>varchar</type>
+        <title>Twitter app ID</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Unique App ID</comment>
+        <length>255</length>
+        <default>NULL</default>
+
+        <add>4.6</add>
+    </field>
+    <primaryKey>
+        <name>APP_ID</name>
+        <autoincrement>false</autoincrement>
+    </primaryKey>
+
+    <field>
+        <name>App_Name</name>
+        <type>varchar</type>
+        <title>Twitter app name</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter Application</comment>
+        <length>255</length>
+        <default>NULL</default>
+        <add>4.6</add>
+    </field>
+
+
+    <field>
+        <name>Consumer_key</name>
+        <type>varchar</type>
+        <title>Twitter application consumer key</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter Application</comment>
+        <length>255</length>
+        <default>NULL</default>
+        <add>4.6</add>
+
+    </field>
+
+    <field>
+        <name>Consumer_secret</name>
+        <type>varchar</type>
+        <title>Twitter application consumer secret</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter Application</comment>
+        <length>255</length>
+        <default>NULL</default>
+        <add>4.6</add>
+
+    </field>
+
+
+
+
+
+
+</table>

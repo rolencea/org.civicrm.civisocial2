@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+    <base>CRM/Civisocial</base>
+    <class>CivisocialAutotweetscheduled</class>
+    <name>civisocial_auto_tweets_rss_scheduled</name>
+    <comment>Holds information about automatic tweets scheduled</comment>
+    <add>4.6</add>
+
+
+
+
+
+
+
+
+
+
+</table>

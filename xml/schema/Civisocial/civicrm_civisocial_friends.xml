@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+    <base>CRM/Civisocial</base>
+    <class>CivisocialFriends</class>
+    <name>civisocial_Friends</name>
+    <comment>Holds information about friends</comment>
+    <add>4.6</add>
+
+
+
+
+    <field>
+        <name>user_id</name>
+        <type>bigint</type>
+        <title>Twitter user id</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter user id</comment>
+        <length>20</length>
+        <default>NULL</default>
+
+
+        <add>4.6</add>
+    </field>
+    <primaryKey>
+        <name>user_id</name>
+        <autoincrement>false</autoincrement>
+    </primaryKey>
+
+    <field>
+        <name>current</name>
+        <type>tinyint</type>
+        <title>Twitter user status</title>
+        <import>true</import>
+        <required>true</required>
+        <comment>Twitter user status</comment>
+        <length>1</length>
+        <default>NULL</default>
+
+
+        <add>4.6</add>
+    </field>
+
+
+
+
+
+
+
+
+</table>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<tables xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="CivisocialUser.xml"            parse="xml" />
+    <xi:include href="civicrm_civisocial_followers.xml"            parse="xml" />
+    <xi:include href="civicrm_civisocial_engagement_account.xml"            parse="xml" />
+    <xi:include href="civicrm_civisocial_users.xml"            parse="xml" />
+    <xi:include href="civicrm_civisocial_user_tags.xml"            parse="xml" />
+    <xi:include href="civicrm_civisocial_dms.xml"            parse="xml" />
+    <xi:include href="civicrm_civisocial_tweets.xml"            parse="xml" />
+    <xi:include href="civicrm_civisocial_faceboook_Settings.xml"            parse="xml" />
+    <xi:include href="civicrm_civisocial_Twitter_Settings.xml"            parse="xml" />
+
+</tables>

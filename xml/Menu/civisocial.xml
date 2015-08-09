@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/civisocial/login</path>
+    <page_callback>CRM_Civisocial_Page_Login</page_callback>
+    <title>Login</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/civisocial/facebookcallback</path>
+    <page_callback>CRM_Civisocial_Page_FacebookCallback</page_callback>
+    <title>FacebookCallback</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/admin/setting/preferences/civisocial</path>
+    <page_callback>CRM_Civisocial_Form_Settings</page_callback>
+    <title>Settings</title>
+    <access_arguments>administer CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/civisocial/googlepluscallback</path>
+    <page_callback>CRM_Civisocial_Page_GooglePlusCallback</page_callback>
+    <title>GooglePlusCallback</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/twitter</path>
+    <page_callback>CRM_Civisocial_Page_Twitter</page_callback>
+    <title>Twitter</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/facebook</path>
+    <page_callback>CRM_Civisocial_Page_Facebook</page_callback>
+    <title>Facebook</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+
+  <item>
+    <path>civicrm/facebooksettings</path>
+    <page_callback>CRM_Civisocial_Form_Facebooksettings</page_callback>
+    <title>Facebooksettings</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/twittersettings</path>
+    <page_callback>CRM_Civisocial_Form_Twittersettings</page_callback>
+    <title>Twittersettings</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>
