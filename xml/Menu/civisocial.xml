@@ -25,6 +25,7 @@
     <access_arguments>access CiviCRM</access_arguments>
   </item>
   <item>
+<<<<<<< HEAD
     <path>civicrm/twitter</path>
     <page_callback>CRM_Civisocial_Page_Twitter</page_callback>
     <title>Twitter</title>
@@ -47,6 +48,23 @@
     <path>civicrm/twittersettings</path>
     <page_callback>CRM_Civisocial_Form_Twittersettings</page_callback>
     <title>Twittersettings</title>
+=======
+    <path>civicrm/facebookinfo</path>
+    <page_callback>CRM_Civisocial_Page_Facebookinfo</page_callback>
+    <title>Facebookinfo</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/twitterinfo</path>
+    <page_callback>CRM_Civisocial_Page_Twitterinfo</page_callback>
+    <title>Twitterinfo</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/appcredentials</path>
+    <page_callback>CRM_Civisocial_Form_Appcredentials</page_callback>
+    <title>Appcredentials</title>
+>>>>>>> 4e2fb13089ec61a559b09d67b89af337c6d8c200
     <access_arguments>access CiviCRM</access_arguments>
   </item>
 </menu>

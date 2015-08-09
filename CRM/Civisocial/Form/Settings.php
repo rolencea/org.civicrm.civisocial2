@@ -17,7 +17,10 @@ class CRM_Civisocial_Form_Settings extends CRM_Core_Form {
     CRM_Utils_System::setTitle(ts('Civisocial OAuth Credential Preferences'));
 
     $settings = $this->getFormSettings();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4e2fb13089ec61a559b09d67b89af337c6d8c200
     foreach ($settings as $name => $setting) {
       if (isset($setting['quick_form_type'])) {
         $add = 'add' . $setting['quick_form_type'];

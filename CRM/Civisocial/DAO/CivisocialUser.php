@@ -186,7 +186,11 @@ class CRM_Civisocial_DAO_CivisocialUser extends CRM_Core_DAO
           'title' => ts('Backend') ,
           'description' => 'Backend OAuth Provider',
           'maxlength' => 128,
+<<<<<<< HEAD
           'size' => CRM_Utils_Type::HUGE,
+=======
+          'size' => 30,
+>>>>>>> 4e2fb13089ec61a559b09d67b89af337c6d8c200
           'export' => true,
           'where' => 'civisocial_user.backend',
           'headerPattern' => '',
@@ -202,7 +206,11 @@ class CRM_Civisocial_DAO_CivisocialUser extends CRM_Core_DAO
           'description' => 'User ID for facebook, to be used to match friends etc.',
           'required' => false,
           'maxlength' => 128,
+<<<<<<< HEAD
           'size' => CRM_Utils_Type::HUGE,
+=======
+          'size' => 128,
+>>>>>>> 4e2fb13089ec61a559b09d67b89af337c6d8c200
           'export' => true,
           'where' => 'civisocial_user.facebook_user_id',
           'headerPattern' => '',
@@ -216,7 +224,11 @@ class CRM_Civisocial_DAO_CivisocialUser extends CRM_Core_DAO
           'description' => 'Access Token Provided by OAuth Provider',
           'required' => false,
           'maxlength' => 511,
+<<<<<<< HEAD
           'size' => CRM_Utils_Type::HUGE,
+=======
+          'size' => 511,
+>>>>>>> 4e2fb13089ec61a559b09d67b89af337c6d8c200
           'export' => true,
           'where' => 'civisocial_user.access_token',
           'headerPattern' => '',
@@ -230,7 +242,11 @@ class CRM_Civisocial_DAO_CivisocialUser extends CRM_Core_DAO
           'description' => 'Access Token Provided by OAuth Provider',
           'required' => false,
           'maxlength' => 1023,
+<<<<<<< HEAD
           'size' => CRM_Utils_Type::HUGE,
+=======
+          'size' => 1023,
+>>>>>>> 4e2fb13089ec61a559b09d67b89af337c6d8c200
           'export' => true,
           'where' => 'civisocial_user.oauth_object',
           'headerPattern' => '',

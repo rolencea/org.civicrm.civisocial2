@@ -25,7 +25,11 @@
     </primaryKey>
 
     <field>
+<<<<<<< HEAD
         <name>App_Name</name>
+=======
+        <name>App_Name/name>
+>>>>>>> 4e2fb13089ec61a559b09d67b89af337c6d8c200
         <type>varchar</type>
         <title>Twitter app name</title>
         <import>true</import>
@@ -51,7 +55,11 @@
     </field>
 
     <field>
+<<<<<<< HEAD
         <name>Consumer_secret</name>
+=======
+        <name>Consumer_secret/name>
+>>>>>>> 4e2fb13089ec61a559b09d67b89af337c6d8c200
         <type>varchar</type>
         <title>Twitter application consumer secret</title>
         <import>true</import>

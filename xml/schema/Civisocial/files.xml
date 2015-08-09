@@ -2,13 +2,22 @@
 
 <tables xmlns:xi="http://www.w3.org/2001/XInclude">
   <xi:include href="CivisocialUser.xml"            parse="xml" />
+<<<<<<< HEAD
     <xi:include href="civicrm_civisocial_followers.xml"            parse="xml" />
+=======
+
+    <xi:include href="civicrm_civisocial_followers.xml"            parse="xml" />
+    <xi:include href="civicrm_civisocial_Twitter_Settings.xml"            parse="xml" />
+>>>>>>> 4e2fb13089ec61a559b09d67b89af337c6d8c200
     <xi:include href="civicrm_civisocial_engagement_account.xml"            parse="xml" />
     <xi:include href="civicrm_civisocial_users.xml"            parse="xml" />
     <xi:include href="civicrm_civisocial_user_tags.xml"            parse="xml" />
     <xi:include href="civicrm_civisocial_dms.xml"            parse="xml" />
     <xi:include href="civicrm_civisocial_tweets.xml"            parse="xml" />
+<<<<<<< HEAD
     <xi:include href="civicrm_civisocial_faceboook_Settings.xml"            parse="xml" />
     <xi:include href="civicrm_civisocial_Twitter_Settings.xml"            parse="xml" />
 
+=======
+>>>>>>> 4e2fb13089ec61a559b09d67b89af337c6d8c200
 </tables>
