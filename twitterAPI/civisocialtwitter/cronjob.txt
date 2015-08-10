@@ -1,0 +1,30 @@
+# Scripts that run every minute and check a schedule
+* * * * * cd /var/www/engagement/code; php post_scheduled_tweets.php
+* * * * * cd /var/www/engagement/code; php post_recurring_tweets.php
+
+# Scripts that run a few times a day
+17 */3 * * * cd /var/www/engagement/code; php post_new_follow_tweets.php
+25 7-23 * * * cd /var/www/engagement/code; php post_new_follow_dms.php
+
+# Variety of API calls done each hour
+0 * * * * cd /var/www/engagement/code; php collect_new_leader_timeline.php
+5 * * * * cd /var/www/engagement/code; php collect_new_leader_search.php
+10 * * * * cd /var/www/engagement/code; php purge_user_accounts.php
+15 * * * * cd /var/www/engagement/code; php collect_new_engagement_timeline.php
+20 * * * * cd /var/www/engagement/code; php collect_new_engagement_search.php
+25 * * * * cd /var/www/engagement/code; php collect_new_dms_sent.php
+30 * * * * cd /var/www/engagement/code; php collect_new_dms_received.php
+35 * * * * cd /var/www/engagement/code; php collect_rss_feeds.php
+40 * * * * cd /var/www/engagement/code; php collect_engagement_friends.php
+45 * * * * cd /var/www/engagement/code; php collect_engagement_followers.php
+
+# Spread out /users/lookup over each hour
+0 * * * * cd /var/www/engagement/code; php update_all_account_profiles.php
+20 * * * * cd /var/www/engagement/code; php collect_mentioned_account_profiles.php
+40 * * * * cd /var/www/engagement/code; php collect_retweeted_account_profiles.php
+50 * * * * cd /var/www/engagement/code; php  collect_engagement_friends_profiles.php
+55 * * * * cd /var/www/engagement/code; php collect_engagement_followers.php
+
+# Once per day
+0 0 * * * cd /var/www/engagement/code; php update_user_tags.php
+0 0 * * * cd /var/www/engagement/code; php update_recurring_tweets.php

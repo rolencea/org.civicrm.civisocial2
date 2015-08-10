@@ -1,0 +1,111 @@
+.tweet{float:left;padding-bottom:8px;position:relative;width:550px;}
+.tweet_left{float:left;margin:4px 4px 4px 2px;margin-top:2px;width:28px;}
+.tweet_right{-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #DADADA;float:right;padding:2px 5px 1px;position:relative;width:478px;padding-bottom:4px;}
+.tweet_triangle{background:url("http://140elect.com/content/images/twitter_triangle.gif") no-repeat scroll 100% 0 transparent;height:13px;left:-7px;position:absolute;top:10px;width:7px;}
+.tweet_row{display:block;line-height:15px;position:relative;}
+.tweet_username{color:#999999;font-size:12px;padding-top: 4px;}
+.tweet_username a{color:#333333;font-size:14px;margin-right:2px;font-weight:bold;text-decoration:none;}
+.tweet_username a:hover{color:#C40001;text-decoration:underline;}
+.tweet_text{font-size:14px;color:#222;font-family:Arial,"Helvetica Neue",sans-serif;line-height:20px;padding:0;word-wrap:break-word;margin-bottom:3px;width:100%;}
+.tweet_text a{color:#5799DB;text-decoration:none;}
+.tweet_text a:hover{color:#C40001;text-decoration:underline;}
+.tweet_timestamp{color:#999999;font-size:11px;text-decoration:none;margin-right:4px;    display:inline;}
+.tweet_timestamp p {float:left;}
+.tweet_timestamp a{color:#999999;font-size:11px;text-decoration:none;float:left;display:inline;}
+.tweet_timestamp a:hover{color:#C40001;text-decoration:underline;}
+.tweet_left img{border:2px solid #fff;margin-top:1px;}
+.tweet_left img:hover{border:2px solid #C40001;}
+.tweet_id{display:none;}
+.tweet p{margin:0px;padding:0px;float:left;display:inline;}
+.tweet_timestamp img{float:left;    margin-left: 4px;
+    margin-right: 1px;
+    margin-top: -2px;}
+.imageof_retweet{margin-top:-1px !important;}
+.stream_bluebird{margin-left:0px !important;margin-right:4px !important;}
+.retweets{float:left;}
+.retweet_image{width:14px;height:8px;}
+.retweet_count {
+    -moz-border-radius: 3px 3px 3px 3px;
+    background: none repeat scroll 0 0 #C6E4F2;
+    color: #999999;
+    display: inline;
+    float: left;
+    font-size: 11px;
+    line-height: 13px;    margin: 0 5px 0 0;
+    padding: 1px 3px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #C6E4F2;
+  }
+  .retweet_link,.retweet_link:hover{
+  	text-decoration:none !important;
+  }
+  .retweet_link{display:inline;float:right;}
+.toptweet .retweet_count:hover{
+  	text-decoration:none !important;
+  }
+  .retweet_count:hover{
+  	text-decoration:none !important;
+  }
+.toptweet  .retweet_count{display:inline;  -moz-background-clip:border;
+    -moz-background-origin:padding;
+    -moz-background-size:auto auto;
+	  -moz-border-radius:3px 3px 3px 3px;-webkit-border-radius:3px;border-radius:3px;
+    background-attachment:scroll;
+    background-color:#C6E4F2;
+    background-image:none;
+    background-position:0 0;
+    background-repeat:repeat;
+    color:#555555;
+    margin:0px;    margin-left:0px;
+    margin-right:3px;
+
+    padding-bottom:2px;
+    padding-left:3px;
+    padding-right:3px;
+    padding-top:2px;
+    text-shadow:0 1px 0 #C6E4F2;    color:#999999;
+    font-size:12px;
+    text-decoration:none;
+	float:left;
+  }
+
+.tweet_time_link{float:left;}
+.tweet_follow, .tweet_intents{color:#999999;font-size:11px;text-decoration:none;float:left;}
+.tweet_follow a, .tweet_intents a{color:#999999;font-size:11px;text-decoration:none;}
+.tweet_follow a:hover, .tweet_intents a:hover{color:#C40001;text-decoration:underline;}
+.tweet_intents img {margin-bottom:-4px;}
+.tweet_intents .imageof_retweet {margin-bottom:-5px;}
+.tweet_intents a {margin-right:4px;}
+.tweet_follow, .toptweet_intents{color:#999999;font-size:12px;text-decoration:none;}
+.tweet_follow a, .toptweet_intents a{color:#999999;font-size:12px;text-decoration:none;}
+.tweet_follow a:hover, .toptweet_intents a:hover{color:#C40001;text-decoration:underline;}
+.tweet_actions {display:none;}
+.toptweet_actions {display:none;}
+.tweet_actions div {    
+	display:inline;
+    float:left;
+    margin-bottom:0;
+    margin-right:4px;
+    margin-top:0;}
+.tweet_actions a, .toptweet_actions a {color:#5799DB; text-decoration:underline;cursor:pointer;}
+.tweet_actions a:hover, .toptweet_actions a:hover {color:#c40001; }
+.retweet_sprite { background-image: url("http://140elect.com/content/images/2012twit_sprite_2.png"); display: inline-block; width: 14px; background-position: 33px 2px; height: 12px;}
+.tweetthis{position:absolute;top:10px;right:10px;}
+.tweet .twitter-follow-button{margin-bottom:-4px;margin-left:6px;}
+
+hr{    color: #BBBBBB;
+    margin-top: 8px;}
+#stats_plot .stats{
+	margin-bottom:20px;    min-height: 60px;
+}
+#stats_plot{
+	margin-left:8px;
+}
+.retweet_count{float: left; margin-right: 6px;}
+.preview_row {    min-height: 58px;}
+.preview_row input{float:left;    margin: 6px;
+height:36px;    width: 36px;}
+.preview_row img{float:left;margin-right:8px;height: 43px;width: 43px;}
+.preview_row p{font-size:14px;    margin: 0;}
+.preview_row p a {font-size:14px; font-weight:bold; margin-right: 5px;}
+.preview_name {color:#666;    font-size: 12px;}

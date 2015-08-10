@@ -1,0 +1,6 @@
+.dm_left,.dm_right{min-height:58px;}
+.dm_left{float:left;margin-right:24px;width:250px;}
+.dm_right{position:relative;display: inherit;margin-left: 275px;}
+.dm_left img,.dm_right img{float:left; margin-right:8px;}
+.dm_time{color: #999999;font-size: 11px;text-decoration: none;}
+.arrow_right{position:absolute;left:-36px;top:6px;}

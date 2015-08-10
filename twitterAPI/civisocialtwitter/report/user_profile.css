@@ -1,0 +1,28 @@
+h3{
+	margin-bottom:0px;
+}
+
+.column {
+	float:left;
+}
+
+.columnright{
+	float:right;
+}
+
+.column ol{
+	margin-top:0px;
+}
+
+#user_description {
+	height: 64px;
+}
+
+#user_image {
+	float: left;
+	height: 64px;
+	width: 56px;
+	margin:2px;
+}
+
+.twitter-follow-button{margin-bottom: -4px; margin-left: 6px;}

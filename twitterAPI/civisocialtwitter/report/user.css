@@ -1,0 +1,85 @@
+.user_row {
+min-height:60px;
+font-size:13px;
+border-bottom: 1px solid #ccc;
+margin-bottom: 12px;
+}
+
+.user_img {
+-moz-border-radius:5px;
+border-radius:5px;
+width:73px;
+height:73px;
+margin-top:2px;
+border:3px solid #d3d3d3;
+float:left;
+}
+
+.user_titles,.user_desc,.user_stats {
+}
+
+.user_titles {
+	margin-bottom:2px;
+	margin-left:90px;
+	font-size:16px;
+}
+.user_titles p{
+	margin:2px;
+	font-weight:bold;
+	color:#333;
+}
+.user_titles a{
+	color:#999;
+	text-decoration:none;
+	font-weight:normal;
+	font-size:14px;
+}
+
+.user_sn {
+font-weight:700;
+text-decoration:none;
+}
+
+.user_name {
+font-size:11px;
+color:#444;
+}
+
+.user_desc {
+color:#111;
+font-size:14px;
+	margin-top:2px;
+	margin-left:90px;
+}
+.user_location{
+	margin-top:4px;
+color:#333;
+font-size:14px;
+margin-left:90px;
+}
+
+.user_stats {
+list-style:none;
+font-size:12px;
+margin-top:5px;
+max-width:600px;
+padding:0px;
+margin-left:90px;
+}
+
+.twitter-follow-button{margin-bottom: -5px; margin-left: 8px;}
+
+.user_stats li {
+display: inline-block;
+margin-right:8px;
+padding-right:8px;
+border-right:1px solid #ccc;
+}
+
+.user_stats li b {
+display:block;
+}
+
+.user_row:last-child,.user_stats li:last-child {
+border:0;
+}
