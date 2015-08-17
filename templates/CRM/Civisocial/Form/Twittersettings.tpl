@@ -1,15 +1,12 @@
 {* HEADER *}
 
-<div class="crm-submit-buttons">
-{include file="CRM/common/formButtons.tpl" location="top"}
-</div>
-
 {* FIELD EXAMPLE: OPTION 1 (AUTOMATIC LAYOUT) *}
 
 {foreach from=$elementNames item=elementName}
   <div class="crm-section">
-    <div class="label">{$form.$elementName.label}</div>
+    <div class="label" align="center"><storng>{$form.$elementName.label}</storng></div>
     <div class="content">{$form.$elementName.html}</div>
+      <br/>
     <div class="clear"></div>
   </div>
 {/foreach}
@@ -22,6 +19,6 @@
   </div>
 
 {* FOOTER *}
-<div class="crm-submit-buttons">
+<div class="crm-submit-buttons" align="center">
 {include file="CRM/common/formButtons.tpl" location="bottom"}
 </div>

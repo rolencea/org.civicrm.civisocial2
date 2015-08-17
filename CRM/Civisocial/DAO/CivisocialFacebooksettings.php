@@ -33,6 +33,8 @@
  */
 require_once 'CRM/Core/DAO.php';
 require_once 'CRM/Utils/Type.php';
+
+
 class CRM_Civisocial_DAO_CivisocialFacebooksettings extends CRM_Core_DAO
 {
   /**

@@ -1,6 +1,35 @@
 <?php
 
 return array(
+
+
+    'App_ID' => array(
+        'group_name' => 'CiviSocial Account Credentials',
+        'group' => 'civisocial',
+        'name' => 'App_ID',
+        'type' => 'String',
+        'is_domain' => 1,
+        'is_contact' => 0,
+        'title' => 'Twitter AppId',
+        'description' => 'Twitter Application ID',
+        'html_type' => 'Text',
+        'quick_form_type' => 'Element',
+    ),
+
+    'twitter_app_' => array(
+        'group_name' => 'CiviSocial Account Credentials',
+        'group' => 'civisocial',
+        'name' => 'twitter_app_id',
+        'type' => 'String',
+        'is_domain' => 1,
+        'is_contact' => 0,
+        'title' => 'Twitter AppId',
+        'description' => 'Twitter Application ID',
+        'help_text' => 'Appid for facebook app. Please look <a href="https://developers.facebook.com/docs/facebook-login/login-flow-for-web/v2.3">here</a> for more details.',
+        'html_type' => 'Text',
+        'quick_form_type' => 'Element',
+    ),
+
     'enable_facebook' => array(
         'group_name' => 'CiviSocial Account Credentials',
         'group' => 'civisocial',

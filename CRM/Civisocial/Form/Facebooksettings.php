@@ -7,27 +7,24 @@ require_once 'CRM/Core/Form.php';
  *
  * @see http://wiki.civicrm.org/confluence/display/CRMDOC43/QuickForm+Reference
  */
-class CRM_Civisocial_Form_Facebooksettings extends CRM_Core_Form {
 
 
-    function preProcess() {
-        // Perform any setup tasks you may need
-        // often involves grabbing args from the url and storing them in class variables
-        $this->_foo = CRM_Utils_Request::retrieve('foo', 'string');
-    }
+class CRM_Civisocial_Form_Facebooksettings extends CRM_Core_Form
+{
 
 
+    //build the form
 
-    function buildQuickForm() {
+
+    function buildQuickForm()
+    {
 
         CRM_Utils_System::setTitle(ts('Civisocial Facebook Credentials '));
 
 
-
-        $this->add('text', 'facebookappid', ts('Facebook App ID'));
-        $this->add('text', 'facebookappsecret', ts('Facebook App Secret'));
-        $this->add('text', 'facebookappname', ts('Facebook App Name'));
-
+        $this->add('text', 'App_ID', ts('Facebook App ID'));
+        $this->add('text', 'App_secret', ts('Facebook App Secret'));
+        $this->add('text', 'App_Name', ts('Facebook App Name'));
 
 
         $this->addButtons(array(
@@ -43,12 +40,20 @@ class CRM_Civisocial_Form_Facebooksettings extends CRM_Core_Form {
         parent::buildQuickForm();
     }
 
+
+
+
+    /*
+     *
+     * Process the form after it has been submitted
+     *
+     */
+
+
+
     function postProcess() {
         $values = $this->exportValues();
-
-
-
-
+        $this->save_CivisocialFacebooksettings($values);
         parent::postProcess();
     }
 
@@ -61,11 +66,9 @@ class CRM_Civisocial_Form_Facebooksettings extends CRM_Core_Form {
      *
      *
      */
-    function getRenderableElementNames() {
-        // The _elements list includes some items which should not be
-        // auto-rendered in the loop -- such as "qfKey" and "buttons".  These
-        // items don't have labels.  We'll identify renderable by filtering on
-        // the 'label'.
+    function getRenderableElementNames()
+    {
+
         $elementNames = array();
         foreach ($this->_elements as $element) {
             /** @var HTML_QuickForm_Element $element */
@@ -76,28 +79,74 @@ class CRM_Civisocial_Form_Facebooksettings extends CRM_Core_Form {
         }
         return $elementNames;
     }
-}
 
-function addRules() {
 
-    $this->addFormRule(array('CRM_Example_Form', 'myRules'));
-}
-/**
- * Here's our custom validation callback
- */
-function myRules($values) {
-    $errors = array();
-    if ($values['foo'] != 'abc') {
-        $errors['foo'] = ts('You entered the wrong text!');
+//function to validate form data before submitting
+
+
+    function addRules()
+    {
+
+        $this->addFormRule(array('CRM_Civisocial_Form_Facebooksettings', 'validate_appid_empty'));
+        $this->addFormRule(array('CRM_Civisocial_Form_Facebooksettings', 'validate_appname_empty'));
+        $this->addFormRule(array('CRM_Civisocial_Form_Facebooksettings', 'validate_appsecret_empty'));
+
     }
-    return empty($errors) ? TRUE : $errors;
+
+
+    function validate_appid_empty($fields)
+    {
+        if (empty($fields['App_ID'])) {
+            $errors['App_ID'] = ts('Application ID can not be empty');
+            return $errors;
+        }
+        return TRUE;
+    }
+
+    function validate_appname_empty($fields)
+    {
+
+        if (empty($fields['App_Name'])) {
+            $errors['App_Name'] = ts('Application Name can not be empty');
+            return $errors;
+        }
+        return TRUE;
+
+    }
+
+
+    function validate_appsecret_empty($fields)
+    {
+
+        if (empty($fields['App_secret'])) {
+            $errors['App_secret'] = ts('Application Secret can not be empty');
+            return $errors;
+        }
+        return TRUE;
+
+    }
+
+
+    protected function save_CivisocialFacebooksettings($values)
+    {
+        $fields = CRM_Civisocial_DAO_CivisocialFacebooksettings::fields();
+
+        foreach ($fields as $field) {
+
+            if (isset($values[$field['name']])) {
+                $params[$field['name']] = $values[$field['name']];
+
+            }
+        }
+
+        CRM_Civisocial_BAO_CivisocialFacebooksettings::add($params);
+
+
+    }
+
+
 }
 
-function postProcess() {
-    // get the submitted values as an array
-    $vals = $this->controller->exportValues($this->_name);
 
 
-    // Save to the database
-    civicrm_api3('foo', 'create', $vals);
-}
+

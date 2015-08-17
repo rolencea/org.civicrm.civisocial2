@@ -127,7 +127,7 @@ function civisocial_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
  * Include the settings page in civicrm navigation menu.
  */
 
-function civisocial_civicrm_navigationMenu(&$params){
+/*function civisocial_civicrm_navigationMenu(&$params){
   $maxID = CRM_Core_DAO::singleValueQuery("SELECT max(id) FROM civicrm_navigation")+300;
 
   $civisocial_settings_url = "civicrm/admin/setting/preferences/civisocial";
@@ -147,4 +147,102 @@ function civisocial_civicrm_navigationMenu(&$params){
         'active'     => 1
       )
     );
+}*/
+
+
+
+
+
+
+function civisocial_civicrm_navigationMenu( &$params ) {
+    $maxKey = ( max( array_keys($params) ) );
+
+    $params[$maxKey+1] = array (
+        'attributes' => array (
+            'label'      => 'Civisocial',
+            'name'       => 'Civisocial',
+            'url'        => null,
+            'permission' => null,
+            'operator'   => null,
+            'separator'  => null,
+            'parentID'   => null,
+            'navID'      => $maxKey+1,
+            'active'     => 1
+        ),
+        'child' =>  array (
+            '1' => array (
+                'attributes' => array (
+                    'label'      => 'Settings',
+                    'name'       => 'Settings',
+                    'url'        => "civicrm/admin/setting/preferences/civisocial",
+                    'operator'   => null,
+                    'separator'  => 1,
+                    'parentID'   => $maxKey+1,
+                    'navID'      => 1,
+                    'active'     => 1
+                )),
+
+                    '2' => array (
+                        'attributes' => array (
+                            'label'      => 'Enter Facebook Credentials',
+                            'name'       => 'Enter Facebook Credential',
+                            'url'        => "civicrm/facebooksettings",
+                            'operator'   => null,
+                            'separator'  => 1,
+                            'parentID'   => $maxKey+1,
+                            'navID'      => 1,
+                            'active'     => 1
+                        )
+            ),
+
+            '3' => array (
+                'attributes' => array (
+                    'label'      => 'Enter Twitter Credentials',
+                    'name'       => 'Enter Twitter Credential',
+                    'url'        => "civicrm/twittersettings",
+                    'operator'   => null,
+                    'separator'  => 1,
+                    'parentID'   => $maxKey+1,
+                    'navID'      => 1,
+                    'active'     => 1
+                )
+            ),
+
+
+            '4' => array (
+                'attributes' => array (
+                    'label'      => 'Manage Twitter Integration',
+                    'name'       => 'Manage Twitter Integration',
+                    'url'        => "civicrm/twitter",
+                    'operator'   => null,
+                    'separator'  => 1,
+                    'parentID'   => $maxKey+1,
+                    'navID'      => 1,
+                    'active'     => 1
+                )
+            ),
+
+
+            '5' => array (
+                'attributes' => array (
+                    'label'      => 'Manage Facebook Integration',
+                    'name'       => 'Manage Facebook Integration',
+                    'url'        => "civicrm/facebook",
+                    'operator'   => null,
+                    'separator'  => 1,
+                    'parentID'   => $maxKey+1,
+                    'navID'      => 1,
+                    'active'     => 1
+                )
+            ),
+
+
+
+
+
+
+
+        ));
+
+
 }

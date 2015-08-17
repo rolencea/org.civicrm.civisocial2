@@ -9,28 +9,27 @@ require_once 'CRM/Core/Form.php';
  */
 class CRM_Civisocial_Form_Twittersettings extends CRM_Core_Form {
 
-
-
-
-    function preProcess() {
-        // Perform any setup tasks you may need
-        // often involves grabbing args from the url and storing them in class variables
-        $this->_foo = CRM_Utils_Request::retrieve('foo', 'string');
-    }
-
-
+    /*
+     *
+     * build form
+     *
+     */
 
     function buildQuickForm() {
 
+
+        //set title of form
         CRM_Utils_System::setTitle(ts('Civisocial Twitter Credentials '));
 
 
-        $this->add('text', 'twitterappid', ts('Twitter App ID'));
-        $this->add('text', 'twitterappname', ts('Twitter App Name'));
-        $this->add('text', 'twitterapp_consumerkey', ts('Twitter Consumer Key'));
-        $this->add('text', 'twitterapp_ConsumerSecret', ts('Twitter Consumer Secret '));
+
+        //Add form elements
 
 
+        $this->add('text', 'App_ID', ts('Twitter App ID'));
+        $this->add('text', 'App_Name', ts('Twitter App Name'));
+        $this->add('text', 'Consumer_key', ts('Twitter Consumer Key'));
+        $this->add('text', 'Consumer_secret', ts('Twitter Consumer Secret '));
 
         $this->addButtons(array(
             array(
@@ -40,17 +39,26 @@ class CRM_Civisocial_Form_Twittersettings extends CRM_Core_Form {
             ),
         ));
 
+
         // export form elements
         $this->assign('elementNames', $this->getRenderableElementNames());
         parent::buildQuickForm();
     }
 
+
+
+
+    /*
+     *
+     * process form after submission
+     *
+     */
+
+
     function postProcess() {
         $values = $this->exportValues();
 
-
-
-
+        $this->save_CivisocialTwittersettings($values);
         parent::postProcess();
     }
 
@@ -78,28 +86,89 @@ class CRM_Civisocial_Form_Twittersettings extends CRM_Core_Form {
         }
         return $elementNames;
     }
+
+
+//function to validate form data before submitting
+
+
+function addRules()
+{
+
+    $this->addFormRule(array('CRM_Civisocial_Form_Twittersettings', 'validate_appid_empty'));
+    $this->addFormRule(array('CRM_Civisocial_Form_Twittersettings', 'validate_appname_empty'));
+    $this->addFormRule(array('CRM_Civisocial_Form_Twittersettings', 'validate_consumersecret_empty'));
+    $this->addFormRule(array('CRM_Civisocial_Form_Twittersettings', 'validate_consumerkey_empty'));
+
 }
 
-function addRules() {
 
-    $this->addFormRule(array('CRM_Example_Form', 'myRules'));
-}
-/**
- * Here's our custom validation callback
- */
-function myRules($values) {
-    $errors = array();
-    if ($values['foo'] != 'abc') {
-        $errors['foo'] = ts('You entered the wrong text!');
+function validate_appid_empty($fields)
+{
+    if (empty($fields['App_ID'])) {
+        $errors['App_ID'] = ts('Application ID can not be empty');
+        return $errors;
     }
-    return empty($errors) ? TRUE : $errors;
+    return TRUE;
 }
 
-function postProcess() {
-    // get the submitted values as an array
-    $vals = $this->controller->exportValues($this->_name);
+function validate_appname_empty($fields)
+{
+
+    if (empty($fields['App_Name'])) {
+        $errors['App_Name'] = ts('Application Name can not be empty');
+        return $errors;
+    }
+    return TRUE;
+
+}
 
 
-    // Save to the database
-    civicrm_api3('foo', 'create', $vals);
+function validate_consumersecret_empty($fields)
+{
+
+    if (empty($fields['Consumer_secret'])) {
+        $errors['Consumer_secret'] = ts('Application Consumer Secret can not be empty');
+        return $errors;
+    }
+    return TRUE;
+
+}
+
+
+    function validate_consumerkey_empty($fields)
+    {
+
+        if (empty($fields['Consumer_key'])) {
+            $errors['Consumer_key'] = ts('Application consumer key can not be empty');
+            return $errors;
+        }
+        return TRUE;
+
+    }
+
+
+
+    protected function save_CivisocialTwittersettings($values){
+    $fields = CRM_Civisocial_DAO_CivisocialTwittersettings::fields();
+
+    foreach ($fields as $field) {
+
+        $params = array();
+
+        if (isset($values[$field['name']])) {
+            $params[$field['name']] = $values[$field['name']];
+
+        }
+
+    }
+
+
+
+    CRM_Civisocial_BAO_CivisocialTwittersettings::add($params);
+
+
+
+
+}
+
 }

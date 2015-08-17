@@ -109,11 +109,21 @@ class CRM_Civisocial_DAO_CivisocialTwittersettings extends CRM_Core_DAO
    *
    * @return civisocial_twitter_settings
    */
+
+
+
+
   function __construct()
   {
-    $this->__table = 'civisocial_twitter_settings';
+   // $this->__table = 'civisocial_twitter_settings';
+
+      $this->_tableName = 'civisocial_twitter_settings';
     parent::__construct();
   }
+
+
+
+
   /**
    * Returns all the column names of this table
    *
@@ -210,10 +220,17 @@ class CRM_Civisocial_DAO_CivisocialTwittersettings extends CRM_Core_DAO
    *
    * @return string
    */
-  static function getTableName()
+
+
+ static function getTableName()
   {
-    return self::$_tableName;
+   return self::$_tableName;
+
   }
+
+
+
+
   /**
    * Returns if this table needs to be logged
    *
@@ -272,3 +289,12 @@ class CRM_Civisocial_DAO_CivisocialTwittersettings extends CRM_Core_DAO
     return self::$_export;
   }
 }
+
+//CRUD functions
+
+
+
+
+
+
+
